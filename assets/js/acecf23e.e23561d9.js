@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkenja_bib_docs=self.webpackChunkenja_bib_docs||[]).push([[1903],{1912:s=>{s.exports=JSON.parse('{"blogBasePath":"/enja-bib-docs/blog","blogTitle":"Blog","authorsListPath":"/enja-bib-docs/blog/authors"}')}}]);
