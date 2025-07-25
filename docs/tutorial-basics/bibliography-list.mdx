@@ -1,0 +1,74 @@
+---
+sidebar_position: 4
+---
+
+# 参考文献リストの表示
+
+引用した文献の一覧は、`bibliography-list`関数を使って文書内の好きな場所に表示できます。
+
+## 基本的な使い方
+
+```typst
+#bibliography-list(
+  title: [参考文献],
+  ..bib-file(read("mybib_jp.bib")),
+  ..bib-file(read("mybib_en.bib"))
+)
+```
+
+このコードを記述した場所に、読み込んだ`.bib`ファイルの内容に基づいたフォーマット済みの文献リストが生成されます。
+
+## 表示オプション
+
+`bibliography-list`関数には、出力形式をコントロールするための様々なオプション（引数）が用意されています。
+
+### `title`
+
+文献リストのタイトルを指定します。デフォルトは「文　　献」です。
+
+```typst
+#bibliography-list(title: [参考文献])
+```
+
+### `bib-full`
+
+`true`（デフォルト）に設定すると、`.bib`ファイル内の全ての文献を表示します。
+`false`に設定すると、本文中で引用した文献のみを表示します。
+
+```typst
+// 引用した文献のみを表示
+#bibliography-list(bib-full: false)
+```
+
+### `bib-sort`
+
+`true`（デフォルト）に設定すると、文献を著者名のアルファベット順（日本語文献は`yomi`フィールドの値）に並び替えます。
+`false`に設定すると、`.bib`ファイルに記述された順（リスト順）で表示します。
+
+```typst
+// リスト順で表示
+#bibliography-list(bib-sort: false)
+```
+
+### `vancouver-style`
+
+`true`に設定すると、引用番号を振るバンクーバー方式で表示します。
+`false`（デフォルト）に設定すると、著者名と年で示すハーバード方式で表示します。
+
+```typst
+// バンクーバー方式で表示
+#bibliography-list(vancouver-style: true)
+```
+
+これらのオプションを組み合わせることで、投稿先の規定などに合わせた柔軟な文献リストの作成が可能です。
+
+```typst
+// 例：引用した文献のみを、引用順に、バンクーバー方式で表示する
+#bibliography-list(
+  title: [引用文献],
+  bib-full: false,
+  bib-sort-ref: true, // bib-sort: false と bib-sort-ref: true は同じ効果
+  vancouver-style: true,
+  ..bib-file(read("mybib.bib"))
+)
+```

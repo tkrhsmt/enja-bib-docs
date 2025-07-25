@@ -1,7 +1,8 @@
 {
-  "label": "Tutorial - Extras",
+  "label": "上級編：スタイルのカスタマイズ",
   "position": 3,
   "link": {
-    "type": "generated-index"
+    "type": "generated-index",
+    "description": "enja-bibのスタイルを自由にカスタマイズする方法を学びます。"
   }
 }

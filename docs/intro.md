@@ -2,46 +2,33 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# enja-bibへようこそ
 
-Let's discover **Docusaurus in less than 5 minutes**.
+`enja-bib`は、学術論文やレポート作成ツールである[Typst](https://typst.app/)で、日本語と英語の文献をスムーズに扱うために開発されたパッケージです。
+BibTeX形式の文献データベースを利用し、複雑な設定なしで美しい参考文献リストを作成することができます。
 
-## Getting Started
+## `enja-bib`の主な特徴
 
-Get started by **creating a new site**.
+`enja-bib`は、Typstの標準機能だけでは実現が難しい、かゆいところに手が届く機能を提供します。
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+-   **日本語・英語が混在した文献に対応**:
+    日本語の文献と英語の文献で、それぞれ異なる引用スタイルやフォーマットを適用できます。これにより、各言語の慣習に合わせた適切な表示が可能になります。
 
-### What you'll need
+-   **柔軟な並び替え機能**:
+    BibTeXファイルの`yomi`フィールドを認識し、日本語文献を著者名の読みのアルファベット順でソートできます。もちろん、引用順や文献リストの記述順での並び替えもサポートしています。
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+-   **CSLファイル不要**:
+    Typst標準の文献管理機能で必要となるCSL (Citation Style Language) ファイルの知識は不要です。`enja-bib`は独自のスタイル設定システムを持っており、Typstのスクリプトだけで直感的にスタイルを調整できます。
 
-## Generate a new site
+-   **多彩な引用コマンド**:
+    `@label`形式の標準的な引用に加え、著者名と年を文中で自然に引用するための`citet` (`Yamada (2023)`) や `citep` (`(Yamada, 2023)`) といった便利なコマンドが利用できます。
 
-Generate a new Docusaurus site using the **classic template**.
+-   **豊富な表示オプション**:
+    -   参考文献リストに掲載する文献を「引用した文献のみ」または「データベース上のすべての文献」から選択できます。
+    -   引用番号スタイル（バンクーバー方式）と著者名-年スタイル（ハーバード方式）を簡単に切り替えられます。
 
-The classic template will automatically be added to your project after you run the command:
+## このドキュメントについて
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+このドキュメントでは、`enja-bib`のインストール方法から、基本的な使い方、そして独自の引用スタイルを作成するためのカスタマイズ方法まで、順を追って詳しく解説します。
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+さあ、`enja-bib`を使って、あなたのTypstでの文書作成をさらに快適なものにしましょう！
