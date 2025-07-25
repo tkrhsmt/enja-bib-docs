@@ -1,0 +1,3 @@
+[submodule "enja-bib"]
+	path = enja-bib
+	url = git@github.com:tkrhsmt/enja-bib.git
